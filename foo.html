@@ -1,0 +1,35 @@
+<html>
+	<head></head>
+	<body>
+	<script language="javascript">
+console.log('Hello')
+/*
+   'AAAundefined'.indexOf() = 3
+   'AAAAundefined'.indexOf() = 4
+   var chr = String.fromCharCode(97 + xxx
+   a = 0
+   l = 108
+   (11).toString(36); = 'a'
+ */
+function f() {}
+/* 
+   function f() { return
+   console.log("never printed") }
+ */
+
+var foo = 'AAA' + f();
+console.log(foo.indexOf());
+// this alerts '3'
+var bar = "alert(('BBB' + function(){}()).indexOf());"
+eval(bar);
+
+/*
+   instead of 'eval', use
+   var f = window['alert'];
+   var g = 'the parameter';
+   f(g);
+ */
+
+	</script>
+	</body>
+</html>
