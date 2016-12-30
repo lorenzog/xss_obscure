@@ -37,6 +37,11 @@ However, writing 'alert' is not enough; we'd like to execute it. To do so withou
     // will alert 'the parameter'
     f(g);
 
+We're trying to evade filters here and the assumption is a naive filter
+that searches for occurrence of 'eval'. There are other ways to execute
+code (e.g. new ``Function()``, ``setTimeout`` etc.) and this is just an
+example.
+
 Ultimately:
 
     1. Take a payload e.g. 'alert("XSS")'
