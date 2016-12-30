@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Turns a function and a payload into semi-obfuscated javascript for fun and profit."""
+from __future__ import print_function
 import argparse
 import logging
 import os
@@ -35,6 +36,7 @@ def main():
     p.add_argument('-p', '--parameter', help="The parameter to the function e.g. 'XSS'")
     p.add_argument('-o', '--outfile')
     p.add_argument('-f', '--force', action='store_true')
+    # unused for now
     p.add_argument('-d', '--debug', action='store_true')
     args = p.parse_args()
 
@@ -60,9 +62,9 @@ def main():
             raise SystemExit("Destination exists. Use '-f' to overwrite")
         with open(outfile, 'w') as f:
             f.write(final)
-        print "Output saved to {}".format(outfile)
+        print("Output saved to {}".format(outfile))
     else:
-        print final
+        print(final)
 
 
 if __name__ == '__main__':

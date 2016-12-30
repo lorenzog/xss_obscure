@@ -6,7 +6,7 @@ Playing with JavaScript for fun and XSS evasion.
 
 To generate an alert box containing 'XSS':
 
-    python make_s.py alert -p "XSS" -o out.js
+    python make_s.py alert -p XSS -o out.js
 
 Should generate this:
 
